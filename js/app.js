@@ -13,15 +13,15 @@
  * 
 */
 
-let t1=performance.now();
-let navList = document.querySelector('#navbar__list');
+let p1=performance.now();
+let navLists = document.querySelector('#navbar__list');
 let sections = document.querySelectorAll('section');
 
 // build the nav
-for(let section of sections){
+for(let item of sections){
     let navItem = document.createElement('li');
-    navItem.innerHTML = `<a class = "menu__link" href = "#${section.id}">${section.id}</a>`;
-    navList.appendChild(navItem);
+    navItem.innerHTML = `<a class = "menu__link" href = "#${item.id}">${item.id}</a>`;
+    navLists.appendChild(navItem);
 }
 
 // Add class 'active' to section when near top of viewport
